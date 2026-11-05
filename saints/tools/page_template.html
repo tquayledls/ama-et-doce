@@ -1,0 +1,218 @@
+<title>{{NAME}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Alegreya+Sans+SC:wght@500;700&family=Cormorant+Unicase:wght@500;600&display=swap">
+<style>
+/* Layout: a two-column breviary leaf. Painting on the left stays in view while the text reads on the right; on phones they stack. */
+:root {
+  --bg: #F2F3F6;          /* cool vellum */
+  --surface: #FFFFFF;
+  --fg: #1B2232;          /* iron-gall ink */
+  --muted: #586074;
+  --lapis: #27478F;       /* ultramarine, the pigment of heaven in panel painting */
+  --gilt: #9A7628;        /* gold leaf, darkened for text */
+  --rule: #D5D9E3;
+  --lit: {{COLOR}};       /* liturgical color of the day */
+  --display: "Cormorant Unicase", "Cormorant Garamond", Georgia, serif;
+  --body: "Alegreya", Georgia, "Times New Roman", serif;
+  --label: "Alegreya Sans SC", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F131D; --surface: #161B28; --fg: #E6E8EF; --muted: #9CA3B6;
+    --lapis: #93AEF2; --gilt: #D8B566; --rule: #283044; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F131D; --surface: #161B28; --fg: #E6E8EF; --muted: #9CA3B6;
+  --lapis: #93AEF2; --gilt: #D8B566; --rule: #283044; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 1.125rem; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+.lit-band { height: 6px; background: var(--lit); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
+.wrap { max-width: 1120px; margin: 0 auto; }
+header.top { padding-block: 2.25rem 1.75rem; border-bottom: 1px solid var(--rule); display: grid; gap: .5rem; }
+.eyebrow { font-family: var(--label); font-size: .82rem; letter-spacing: .08em; color: var(--muted); display: flex; flex-wrap: wrap; gap: .35rem .9rem; align-items: center; }
+.swatch { display: inline-flex; align-items: center; gap: .4rem; }
+.swatch i { width: .8rem; height: .8rem; border-radius: 50%; background: var(--lit); border: 1px solid var(--rule); display: inline-block; }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.3rem, 6vw, 3.9rem); line-height: 1.02; margin: 0; color: var(--fg); text-wrap: balance; }
+.titles { font-style: italic; color: var(--muted); margin: 0; font-size: 1.15rem; }
+.titles b { font-style: normal; font-weight: 500; color: var(--gilt); font-family: var(--label); letter-spacing: .06em; font-size: .9rem; }
+
+.leaf { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 3.5rem); padding-top: 2rem; align-items: start; }
+figure { margin: 0; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.25rem); display: grid; gap: .75rem; }
+figure .frame { width: fit-content; max-width: 100%; justify-self: center; padding: 10px; background: var(--surface); border: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule), 0 18px 40px -28px rgba(10, 20, 50, .45); }
+figure img { display: block; max-width: 100%; width: auto; height: auto; max-height: 78vh; }
+figcaption { font-size: .95rem; color: var(--muted); line-height: 1.45; }
+figcaption strong { color: var(--fg); font-style: italic; font-weight: 500; }
+figcaption a { color: var(--lapis); }
+
+article { min-width: 0; max-width: 40rem; display: grid; gap: 2.1rem; }
+article section { display: grid; gap: .75rem; }
+article section > * { margin: 0; }
+article h3 { font-family: var(--label); font-weight: 700; font-size: .95rem; letter-spacing: .09em; color: var(--lapis); padding-bottom: .4rem; border-bottom: 1px solid var(--rule); text-wrap: balance; }
+article h3::before { content: "✠ "; color: var(--gilt); }
+article ul, article ol { padding-left: 1.3rem; display: grid; gap: .4rem; }
+article li::marker { color: var(--gilt); }
+article a { color: var(--lapis); text-underline-offset: .15em; }
+article strong { font-weight: 700; }
+article em { font-style: italic; }
+/* The excerpt section reads as a lectionary quotation */
+article section.quote p { font-size: 1.2rem; line-height: 1.55; padding-left: 1.1rem; border-left: 2px solid var(--gilt); }
+sup.fn { font-family: var(--label); font-size: .68em; line-height: 0; margin-left: .08em; }
+sup.fn a { text-decoration: none; color: var(--gilt); padding-inline: .1em; }
+sup.fn a:hover, sup.fn a:focus-visible { text-decoration: underline; }
+article section.sources { font-size: .9rem; line-height: 1.5; color: var(--muted); }
+article section.sources li { scroll-margin-top: 1.5rem; overflow-wrap: anywhere; }
+article section.sources a.back { text-decoration: none; color: var(--gilt); margin-right: .2em; }
+sup.fn { scroll-margin-top: 30vh; }
+article section.sources li:target { color: var(--fg); background: color-mix(in srgb, var(--gilt) 14%, transparent); }
+.intro p:first-child::first-letter { font-family: var(--display); font-size: 3.4em; float: left; line-height: .82; padding: .08em .1em 0 0; color: var(--lapis); }
+
+footer.foot { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); font-family: var(--label); font-size: .85rem; letter-spacing: .05em; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; }
+
+/* Tabs: today's saint and the Church Fathers reading */
+.tabs { display: flex; flex-wrap: wrap; gap: 0 1.75rem; border-bottom: 1px solid var(--rule); margin-top: .25rem; }
+.tabs [role="tab"] { font-family: var(--label); font-size: .95rem; letter-spacing: .07em; color: var(--muted); text-decoration: none; padding: .85rem 0 .7rem; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs [role="tab"] span { letter-spacing: .03em; }
+.tabs [role="tab"]:hover { color: var(--fg); }
+.tabs [role="tab"][aria-selected="true"] { color: var(--lapis); border-bottom-color: var(--gilt); }
+.tabpanel[hidden] { display: none; }
+header.top:has(+ .tabs) { border-bottom: 0; padding-bottom: .5rem; }
+
+/* The Church Fathers reading: one long, quiet column */
+article.fathers { max-width: 40rem; margin: 2.25rem auto 0; display: grid; gap: 1.75rem; }
+article.fathers section { display: grid; gap: .9rem; }
+article.fathers section > * { margin: 0; }
+.reading-head { display: grid; gap: .45rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--rule); }
+.reading-head > * { margin: 0; }
+.reading-head .kicker { font-family: var(--label); font-size: .82rem; letter-spacing: .08em; color: var(--gilt); }
+.reading-head h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.05; text-wrap: balance; }
+.reading-head .byline { font-style: italic; color: var(--muted); font-size: 1.1rem; }
+article.fathers .headnote { color: var(--muted); font-size: 1.02rem; }
+article.fathers h3 { font-family: var(--label); font-weight: 700; font-size: .95rem; letter-spacing: .09em; color: var(--lapis); padding-bottom: .4rem; border-bottom: 1px solid var(--rule); text-wrap: balance; }
+article.fathers h3::before { content: "✠ "; color: var(--gilt); }
+article.fathers h4 { font-family: var(--label); font-weight: 500; font-size: .85rem; letter-spacing: .06em; color: var(--muted); margin-top: .9rem; text-wrap: balance; }
+article.fathers .excerpt p { font-size: 1.16rem; line-height: 1.72; }
+article.fathers .excerpt h4:first-of-type + p::first-letter,
+article.fathers .excerpt h3 + p::first-letter { font-family: var(--display); font-size: 3.2em; float: left; line-height: .82; padding: .08em .1em 0 0; color: var(--lapis); }
+article.fathers a { color: var(--lapis); text-underline-offset: .15em; }
+article.fathers .sources { font-size: .9rem; line-height: 1.5; color: var(--muted); }
+article.fathers .sources ol { padding-left: 1.3rem; display: grid; gap: .4rem; margin: 0; }
+article.fathers .sources li { scroll-margin-top: 1.5rem; overflow-wrap: anywhere; }
+article.fathers .sources a.back { text-decoration: none; color: var(--gilt); margin-right: .2em; }
+article.fathers .sources li:target { color: var(--fg); background: color-mix(in srgb, var(--gilt) 14%, transparent); }
+
+/* The Summa article: the painting first, then the article in its scholastic order */
+article.summa { max-width: 40rem; margin: 2.25rem auto 0; display: grid; gap: 1.6rem; }
+article.summa section { display: grid; gap: 1rem; }
+article.summa section > * { margin: 0; }
+figure.summa-art { position: static; margin: 0; display: grid; gap: .6rem; justify-items: center; }
+figure.summa-art img { display: block; max-width: 100%; max-height: 62vh; width: auto; height: auto; padding: 10px; background: var(--surface); border: 1px solid var(--rule); box-shadow: 0 18px 40px -28px rgba(10, 20, 50, .45); }
+figure.summa-art figcaption { font-size: .88rem; color: var(--muted); text-align: center; }
+article.summa .article-text p { font-size: 1.12rem; line-height: 1.7; }
+article.summa .article-text strong { font-family: var(--label); font-weight: 700; font-size: .9em; letter-spacing: .05em; color: var(--lapis); }
+article.summa .article-text p.objection { color: var(--muted); }
+article.summa .article-text p.sed-contra { padding-left: 1rem; border-left: 2px solid var(--rule); font-style: italic; }
+article.summa .article-text p.sed-contra strong { font-style: normal; }
+article.summa .article-text p.respondeo { padding: 1rem 1.1rem; background: var(--surface); border-left: 3px solid var(--gilt); }
+article.summa a { color: var(--lapis); text-underline-offset: .15em; }
+article.summa .sources { font-size: .9rem; line-height: 1.5; color: var(--muted); }
+article.summa .sources h3 { font-family: var(--label); font-weight: 700; font-size: .95rem; letter-spacing: .09em; color: var(--lapis); padding-bottom: .4rem; border-bottom: 1px solid var(--rule); margin: 0; }
+article.summa .sources ol { padding-left: 1.3rem; display: grid; gap: .4rem; margin: 0; }
+article.summa .sources li { scroll-margin-top: 1.5rem; overflow-wrap: anywhere; }
+article.summa .sources a.back { text-decoration: none; color: var(--gilt); margin-right: .2em; }
+article.summa .sources li:target { color: var(--fg); background: color-mix(in srgb, var(--gilt) 14%, transparent); }
+
+@media (max-width: 760px) {
+  .leaf { grid-template-columns: minmax(0, 1fr); }
+  figure { position: static; max-width: 30rem; margin-inline: auto; width: 100%; }
+  figure img { max-height: 70vh; }
+}
+:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
+</style>
+
+<div class="lit-band" role="presentation"></div>
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">
+      <span>Saint of the Day</span>
+      <span>{{DATE}}{{OCCASION_SEP}}{{OCCASION}}</span>
+      <span class="swatch"><i></i>Liturgical color: {{COLOR_NAME}}</span>
+    </div>
+    <h1>{{NAME}}</h1>
+    <p class="titles">{{TITLES}} &nbsp;<b>Feast · {{FEAST}}</b></p>
+  </header>
+
+{{TABS}}
+  <div class="tabpanel" id="saint" role="tabpanel" aria-labelledby="tab-saint">
+  <div class="leaf">
+    <figure>
+      <div class="frame"><img src="{{IMG}}" alt="{{IMG_TITLE}}, a painting of {{NAME}} by {{IMG_ARTIST}}"></div>
+      <figcaption><strong>{{IMG_TITLE}}</strong>, {{IMG_ARTIST}}. <a href="{{IMG_URL}}" target="_blank" rel="noopener">View full size on Wikimedia Commons</a></figcaption>
+    </figure>
+    <article>
+{{BODY}}
+    </article>
+  </div>
+  </div>
+{{FATHERS}}
+
+  <footer class="foot">
+    <span>{{NAME}}, pray for us.</span>
+    <span>Painting via Wikimedia Commons</span>
+  </footer>
+</div>
+<script>
+  // Give the excerpt section its quotation styling.
+  document.querySelectorAll("article section").forEach(function (s) {
+    var h = s.querySelector("h3");
+    if (h && /excerpt/i.test(h.textContent)) s.classList.add("quote");
+    if (h && /^\s*sources\s*$/i.test(h.textContent)) s.classList.add("sources");
+  });
+
+  // Tabs. The hash picks the tab (#saint, #fathers, or a footnote inside one), so links can open either.
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs [role="tab"]'));
+    if (!tabs.length) return;
+    function show(id) {
+      tabs.forEach(function (t) {
+        var on = t.getAttribute("aria-controls") === id;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+      });
+    }
+    function route() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      var el = id && document.getElementById(id);
+      var panel = el && (el.classList.contains("tabpanel") ? el : el.closest(".tabpanel"));
+      show(panel ? panel.id : "saint");
+      if (el && el !== panel) el.scrollIntoView();
+      else if (el) window.scrollTo(0, 0);   // opening a tab by link: start at the top, with the tabs in view
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var id = t.getAttribute("aria-controls");
+        show(id);
+        history.replaceState(null, "", "#" + id);
+      });
+      t.addEventListener("keydown", function (ev) {
+        var d = ev.key === "ArrowRight" ? 1 : ev.key === "ArrowLeft" ? -1 : 0;
+        if (!d) return;
+        var n = tabs[(i + d + tabs.length) % tabs.length];
+        n.focus(); n.click();
+      });
+    });
+    window.addEventListener("hashchange", route);
+    route();
+  })();
+</script>

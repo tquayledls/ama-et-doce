@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Microsoft_365__outlook_send_mail"
+    ]
+  }
+}

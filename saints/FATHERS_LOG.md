@@ -1,0 +1,7 @@
+# Church Fathers Log
+
+Every reading used on the Church Fathers tab, one row per day. Before choosing a passage, check the **Passages used** column so that no writing is ever repeated (see `FATHERS_PLAN.md`). This file is for planning only and is not shown on the site.
+
+| # | Date | Syllabus # | Topic | Father(s) | Passages used (work, book/chapter, translation) | Words | File |
+|---|------|-----------|-------|-----------|-----------------------------------------------|-------|------|
+| 1 | 2026-11-05 | 1 | Knowing God through His works | St. Theophilus of Antioch | *To Autolycus* I.2–8 (ANF 2, trans. Dods) | 2,259 | [fathers](fathers/2026-11-05-knowing-god-through-his-works.html) |
