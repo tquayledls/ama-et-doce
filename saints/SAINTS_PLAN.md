@@ -42,7 +42,7 @@ Each day page also has a **Church Fathers** tab: a 5–10 minute reading from on
 Each day page also has a **Summa** tab: the next article of the *Summa Theologiae*, in order from I, q.1, a.1 through the Supplement and Appendices, with a public-domain image that fits the topic. The rules are in `SUMMA_PLAN.md` and the history is in `SUMMA_LOG.md`. Generate the file with `saints/tools/summa_article.py` and pass it to `build_page.py --summa`.
 
 ## Website (Netlify)
-- **Hosting:** Netlify publishes the folder `saints/site` from the `saints-of-the-day` branch. `netlify.toml` at the repo root sets this up, and there is no build step. Every push redeploys the site.
+- **Hosting:** Netlify publishes the folder `saints/site` from the `daily` branch. `netlify.toml` at the repo root sets this up, and there is no build step. Every push redeploys the site.
 - **Pages:**
   - `index.html`: today's saint, with an archive of all saints
   - `days/<slug>.html`: one page per day
