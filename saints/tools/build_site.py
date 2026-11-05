@@ -123,7 +123,7 @@ def main():
         head_tags("Page not found: Saint of the Day", DESCRIPTION)
         + "<title>Page not found</title>\n<style>body{font-family:Georgia,serif;max-width:36rem;margin:4rem auto;"
         "padding:0 16px;line-height:1.6;color:#1B2232;background:#F2F3F6}a{color:#27478F}</style>\n</head>\n<body>\n"
-        "<h1>Page not found</h1>\n<p>That page isn't here. <a href=\"/\">Go to today's saint</a>.</p>\n"
+        "<h1>Page not found</h1>\n<p>That page isn't here. <a href=\"/ama-et-doce/\">Go to today's saint</a>.</p>\n"
         f"<p><small>{NETLIFY_LINK}</small></p>\n</body>\n</html>\n")
     print(f"Wrote site/index.html (today: {name}), {len(rs)} day pages, {len(pdfs)} PDFs")
 
