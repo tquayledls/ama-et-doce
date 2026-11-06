@@ -3,7 +3,7 @@ MIT License
 Copyright (c) 2026 tquayledls
 
 This license covers the source code in this repository (the build scripts and
-templates in saints/tools/, netlify.toml, and similar). The written content of
+templates in saints/tools/, the workflow in .github/, and similar). The written content of
 the site is licensed separately: see CONTENT-LICENSE.md.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

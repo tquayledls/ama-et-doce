@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Build the Saint of the Day website (hosted on Netlify) from the daily pages.
+"""Build the Saint of the Day website (hosted on GitHub Pages) from the daily pages.
 
 Usage (from the repo root):  python3 saints/tools/build_site.py
 
 Reads saints/SAINTS_LOG.md (rows in date order) and the matching saints/pages/<date>-<slug>.html,
-then writes the static site that Netlify publishes (see netlify.toml at the repo root):
+then writes the static site that GitHub Pages publishes (see .github/workflows/pages.yml):
   saints/site/index.html          the newest saint's page, plus an archive of every earlier day
   saints/site/days/<slug>.html    a standalone page for each day
   saints/site/print/<slug>.pdf    the pocket print edition for each day, when it exists
   saints/site/404.html            a simple not-found page
 It also writes saints/artifact/index.html, the same home page in the form the claude.ai
 shared page needs (no <!doctype>), for as long as that page is still published.
-Netlify redeploys automatically whenever these files are pushed to GitHub.
+GitHub Pages redeploys automatically whenever these files are pushed to the daily branch.
 """
 import html, os, re, shutil, sys
 
@@ -67,11 +67,8 @@ def with_nav(body, nav_html):
     return body.replace('<div class="wrap">', '<div class="wrap">\n' + nav_html, 1)
 
 REPO = "https://github.com/tquayledls/ama-et-doce"
-# Netlify's open source plan requires a link to Netlify on every page; the text must read
-# "This site is powered by Netlify". The other spans link the licenses and Code of Conduct.
-NETLIFY_LINK = '<a href="https://www.netlify.com">This site is powered by Netlify</a>'
-FOOT_EXTRA = (f'\n    <span>{NETLIFY_LINK}</span>'
-              f'\n    <span>Open source: <a href="{REPO}/blob/HEAD/LICENSE">MIT</a> code, '
+# Footer spans link the licenses and Code of Conduct.
+FOOT_EXTRA = (f'\n    <span>Open source:<a href="{REPO}/blob/HEAD/LICENSE">MIT</a> code, '
               f'<a href="{REPO}/blob/HEAD/CONTENT-LICENSE.md">CC BY 4.0</a> text &middot; '
               f'<a href="{REPO}/blob/HEAD/CODE_OF_CONDUCT.md">Code of Conduct</a></span>\n  ')
 
@@ -124,7 +121,7 @@ def main():
         + "<title>Page not found</title>\n<style>body{font-family:Georgia,serif;max-width:36rem;margin:4rem auto;"
         "padding:0 16px;line-height:1.6;color:#1B2232;background:#F2F3F6}a{color:#27478F}</style>\n</head>\n<body>\n"
         "<h1>Page not found</h1>\n<p>That page isn't here. <a href=\"/ama-et-doce/\">Go to today's saint</a>.</p>\n"
-        f"<p><small>{NETLIFY_LINK}</small></p>\n</body>\n</html>\n")
+        "</body>\n</html>\n")
     print(f"Wrote site/index.html (today: {name}), {len(rs)} day pages, {len(pdfs)} PDFs")
 
 if __name__ == "__main__":

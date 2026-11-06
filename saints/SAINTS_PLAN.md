@@ -41,14 +41,14 @@ Each day page also has a **Church Fathers** tab: a 5–10 minute reading from on
 ## Summa tab
 Each day page also has a **Summa** tab: the next article of the *Summa Theologiae*, in order from I, q.1, a.1 through the Supplement and Appendices, with a public-domain image that fits the topic. The rules are in `SUMMA_PLAN.md` and the history is in `SUMMA_LOG.md`. Generate the file with `saints/tools/summa_article.py` and pass it to `build_page.py --summa`.
 
-## Website (Netlify)
-- **Hosting:** Netlify publishes the folder `saints/site` from the `daily` branch. `netlify.toml` at the repo root sets this up, and there is no build step. Every push redeploys the site.
+## Website (GitHub Pages)
+- **Hosting:** GitHub Pages publishes the folder `saints/site` whenever the `daily` branch is pushed. `.github/workflows/pages.yml` does this, and there is no build step. Every push to `daily` redeploys the site in about a minute.
 - **Pages:**
   - `index.html`: today's saint, with an archive of all saints
   - `days/<slug>.html`: one page per day
   - `print/<slug>.pdf`: the pocket edition for each day
   - `404.html`: page not found
-- **Site URL:** https://ama-et-doce.netlify.app/. Each email links to that day's own page, `https://ama-et-doce.netlify.app/days/<slug>.html`, which never changes. The home page always shows the newest saint.
+- **Site URL:** https://tquayledls.github.io/ama-et-doce/. Each email links to that day's own page, `https://tquayledls.github.io/ama-et-doce/days/<slug>.html`, which never changes. The home page always shows the newest saint.
 - **Each day:**
   1. Build the day page with `python3 saints/tools/build_page.py … --fathers saints/fathers/<file>.html --summa saints/summa/<file>.html` (to `saints/pages/`) and the PDF with `build_print.py` (to `saints/print/`).
   2. Add the log row.
@@ -61,9 +61,9 @@ Each day page also has a **Summa** tab: the next article of the *Summa Theologia
 - Cite the underlying written work, not the website. Examples: the Office of Readings and its Latin edition, not the site that posted it; the Roman Missal, not a parish page; Dante's *Paradiso*, not Wikipedia.
 - Build with `python3 saints/tools/build_print.py` (same metadata flags as the page builder, plus `--notes` and `--out saints/print/YYYY-MM-DD-<slug>.pdf`). It sets real footnotes at the foot of each page, with the painting on the title page and red rubrics.
 
-Email: under the page link, add `<p>From the Church Fathers: <a href="https://ama-et-doce.netlify.app/days/<slug>.html#fathers"><Topic></a> (<Father(s)>, about N min)</p>`.
+Email: under the page link, add `<p>From the Church Fathers: <a href="https://tquayledls.github.io/ama-et-doce/days/<slug>.html#fathers"><Topic></a> (<Father(s)>, about N min)</p>`.
 
-Then add `<p>Summa Theologiae: <a href="https://ama-et-doce.netlify.app/days/<slug>.html#summa"><Article title></a> (<I, q.1, a.1>)</p>`.
+Then add `<p>Summa Theologiae: <a href="https://tquayledls.github.io/ama-et-doce/days/<slug>.html#summa"><Article title></a> (<I, q.1, a.1>)</p>`.
 
 Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 

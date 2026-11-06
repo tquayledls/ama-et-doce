@@ -5,7 +5,7 @@ catechetical and apologetics notes, and the page and print layouts in `saints/en
 `saints/pages/`, `saints/site/` and `saints/print/`) is licensed under the
 [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 You may share and adapt it for any purpose, including commercially, as long as you give
-appropriate credit ("Ama et Doce, https://ama-et-doce.netlify.app"), link to the license,
+appropriate credit ("Ama et Doce, https://tquayledls.github.io/ama-et-doce"), link to the license,
 and indicate if changes were made.
 
 ## What is not covered
