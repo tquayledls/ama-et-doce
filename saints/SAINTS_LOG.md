@@ -10,3 +10,4 @@ Add one row per email, newest at the bottom, and save the full email HTML to `sa
 | 3 | 2026-11-03 | St. Martin de Porres | Nov 3 | Memorial | [entry](entries/2026-11-03-martin-de-porres.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-03-martin-de-porres.html) |
 | 4 | 2026-11-04 | St. Charles Borromeo | Nov 4 | Memorial | [entry](entries/2026-11-04-charles-borromeo.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-04-charles-borromeo.html) |
 | 5 | 2026-11-05 | St. Irenaeus of Lyons | Jun 28 | Open day; patron of apologists and catechists | [entry](entries/2026-11-05-irenaeus-of-lyons.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-05-irenaeus-of-lyons.html) |
+| 6 | 2026-11-06 | St. Justin Martyr | Jun 1 | Open day; philosopher and apologist | [entry](entries/2026-11-06-justin-martyr.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-06-justin-martyr.html) |

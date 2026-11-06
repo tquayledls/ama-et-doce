@@ -75,7 +75,7 @@ Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 | Nov 3 | St. Martin de Porres | Memorial ✅ |
 | Nov 4 | St. Charles Borromeo | Memorial ✅ |
 | Nov 5 | St. Irenaeus of Lyons | Open day ✅ |
-| Nov 6 | St. Justin Martyr | Open day |
+| Nov 6 | St. Justin Martyr | Open day ✅ |
 | Nov 7 | St. Willibrord | Traditional feast |
 | Nov 8 | St. Elizabeth of the Trinity | Feast |
 | Nov 9 | St. Athanasius | Lateran Basilica dedication. Open day |
