@@ -11,3 +11,4 @@ Add one row per email, newest at the bottom, and save the full email HTML to `sa
 | 4 | 2026-11-04 | St. Charles Borromeo | Nov 4 | Memorial | [entry](entries/2026-11-04-charles-borromeo.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-04-charles-borromeo.html) |
 | 5 | 2026-11-05 | St. Irenaeus of Lyons | Jun 28 | Open day; patron of apologists and catechists | [entry](entries/2026-11-05-irenaeus-of-lyons.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-05-irenaeus-of-lyons.html) |
 | 6 | 2026-11-06 | St. Justin Martyr | Jun 1 | Open day; philosopher and apologist | [entry](entries/2026-11-06-justin-martyr.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-06-justin-martyr.html) |
+| 7 | 2026-11-09 | St. Athanasius | May 2 | Open day; defender of Christ's divinity at Nicaea | [entry](entries/2026-11-09-athanasius.html) | [page](https://tquayledls.github.io/ama-et-doce/days/2026-11-09-athanasius.html) |
