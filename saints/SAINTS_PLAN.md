@@ -38,6 +38,8 @@
 ## Church Fathers tab
 Each day page also has a **Church Fathers** tab: a 5–10 minute reading from one or more Fathers, on the next topic in a fixed syllabus that is independent of the saint. The rules, the file format and the syllabus are in `FATHERS_PLAN.md`. The running history of topics and passages is in `FATHERS_LOG.md`, which is never shown on the page. Write `saints/fathers/<date>-<topic-slug>.html`, check it with `check_sources.py`, and pass it to `build_page.py --fathers`. If the file for today already exists (prepared in advance), use it.
 
+Both tabs carry **margin notes** (glosses on names, terms and ideas in the old texts), with an on/off switch that remembers the reader's choice. Write them as you write each reading; the rules and syntax are in the "Margin notes" section of `FATHERS_PLAN.md` and `SUMMA_PLAN.md`.
+
 ## Summa tab
 Each day page also has a **Summa** tab: the next article of the *Summa Theologiae*, in order from I, q.1, a.1 through the Supplement and Appendices, with a public-domain image that fits the topic. The rules are in `SUMMA_PLAN.md` and the history is in `SUMMA_LOG.md`. Generate the file with `saints/tools/summa_article.py` and pass it to `build_page.py --summa`.
 

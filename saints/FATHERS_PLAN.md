@@ -132,3 +132,12 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 78. Watchfulness and the hour of death: Cyprian, *On Mortality* (sections not used for topic 35); Augustine, *Confessions* IX.10
 
 After topic 78, start a second cycle on the same headings, using passages not yet logged.
+
+## Margin notes (Church Fathers and Summa tabs)
+Old texts assume things a modern reader does not know, so each reading carries a few **margin notes**: short glosses that explain a name, a term, or what the author is saying.
+- **Syntax:** in the source file, wrap the exact words in the text like this: `[[anchor words::the note]]`. The anchor stays in the text, underlined; the note appears in the right margin on wide screens and under the paragraph on narrow ones. The builder (`build_page.py`) turns the markers into notes. Put markers only inside `<p>` paragraphs before `<h3>Sources</h3>`. The anchor must occur in the text exactly, and the first occurrence in the file is the one annotated.
+- **What to explain:** people and schools the reader may not know (Heraclitus of Ephesus, Basilides, the Manichæans), strange terms (usury, defluxion, "formality," "habit"), ancient or scholastic ideas the passage depends on (what "science" means for Aquinas, why a first principle can't be proved), and cryptic references (Aristotle is "the Philosopher").
+- **How many:** a decent number but not overwhelming: about 5–10 per Fathers reading and 5–9 per Summa article, spread through the text. Skip anything a general reader already knows.
+- **Wording:** 1–3 sentences, plain English, no more than about 45 words. Say only what you can stand behind. Explain; don't argue, and don't add opinion. The text itself stays verbatim; notes never change it.
+- **Reader's switch:** every reading with notes shows a "Margin notes: on/off" button. Notes are on by default, and the choice is saved in the reader's browser for every page on the site.
+

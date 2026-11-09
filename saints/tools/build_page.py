@@ -84,6 +84,35 @@ def link_notes(s: str, fn: str = "fn", ref: str = "ref") -> str:
     tail = re.sub(r"<li>", item, tail)
     return head + tail
 
+NOTE = re.compile(r"\[\[(.+?)::(.+?)\]\]", re.S)
+
+def plain_notes(s: str) -> str:
+    """Margin-note markers [[anchor phrase::note text]] -> just the anchor phrase (for word counts)."""
+    return NOTE.sub(r"", s)
+
+def apply_notes(s: str) -> str:
+    """Margin notes. A paragraph holding [[anchor phrase::note text]] markers becomes a block: the paragraph
+    (anchors underlined) plus its notes, which the page puts in the right margin on wide screens and under
+    the paragraph on narrow ones. The reader can switch them off (see the toggle in the page template)."""
+    def para(m):
+        attrs, inner = m.group(1), m.group(2)
+        notes = []
+        def mk(n):
+            notes.append((n.group(1), n.group(2)))
+            return f'<span class="mk">{n.group(1)}</span>'
+        inner = NOTE.sub(mk, inner)
+        if not notes:
+            return m.group(0)
+        side = "".join(f'<aside class="mnote"><b>{a}</b> {t}</aside>' for a, t in notes)
+        return f'<div class="mn-block"><p{attrs}>{inner}</p><div class="mnotes">{side}</div></div>'
+    return re.sub(r"<p([^>]*)>(.*?)</p>", para, s, flags=re.S)
+
+MN_TOGGLE = ('<button class="mn-toggle" type="button" aria-pressed="true">Margin notes: <b>on</b></button>')
+
+def notes_before_sources(s: str) -> str:
+    head, sep, tail = s.partition("<h3>Sources</h3>")
+    return apply_notes(head) + sep + tail
+
 def fathers_panel(src: str):
     """The Church Fathers reading (saints/fathers/<date>-<topic>.html) -> (tab label, tab panel HTML).
 
@@ -94,9 +123,9 @@ def fathers_panel(src: str):
         sys.exit("Church Fathers file must start with <h2>Topic</h2> and a <p><em>byline</em></p>.")
     topic, byline, rest = m.group(1).strip(), m.group(2).strip(), src[m.end():]
     reading = rest.split("<h3>Sources</h3>")[0]
-    words = len(html.unescape(re.sub(r"<[^>]+>|\[\d+\]", " ", reading)).split())
+    words = len(html.unescape(re.sub(r"<[^>]+>|\[\d+\]", " ", plain_notes(reading))).split())
     minutes = max(1, round(words / 230))
-    rest = link_notes(rest, "ffn", "fref")
+    rest = notes_before_sources(link_notes(rest, "ffn", "fref"))
     parts = re.split(r"(?=<h3>)", rest.strip())
     out = []
     for p in parts:
@@ -111,7 +140,8 @@ def fathers_panel(src: str):
     panel = ('<div class="tabpanel" id="fathers" role="tabpanel" aria-labelledby="tab-fathers">\n'
              '<article class="fathers">\n<header class="reading-head">\n'
              f'<p class="kicker">From the Church Fathers · about {minutes} min read</p>\n'
-             f'<h2>{topic}</h2>\n<p class="byline">{byline}</p>\n</header>\n'
+             + (MN_TOGGLE + "\n" if "mn-block" in rest else "")
+             + f'<h2>{topic}</h2>\n<p class="byline">{byline}</p>\n</header>\n'
              + "\n".join(out) + "\n</article>\n</div>")
     return re.sub(r"<[^>]+>", "", topic), panel, minutes
 
@@ -124,13 +154,14 @@ def summa_panel(src: str):
     if not m:
         sys.exit("Summa file must start with <h2>, the <p><em> reference line and the <p class=\"art\"> image line.")
     title, where, where_note, commons, caption, rest = m.group(1), m.group(2), m.group(3), html.unescape(m.group(4)), m.group(5), src[m.end():]
-    words = len(html.unescape(re.sub(r"<[^>]+>|\[\d+\]", " ", rest.split("<h3>Sources</h3>")[0])).split())
+    words = len(html.unescape(re.sub(r"<[^>]+>|\[\d+\]", " ", plain_notes(rest.split("<h3>Sources</h3>")[0]))).split())
     minutes = max(1, round(words / 230))
     img = shrink(fetch_image(commons))
     head = link_notes(f"<p>{where}{where_note}</p><figcaption>{caption}</figcaption>" + rest, "sfn", "sref")
     where_html, after = head.split("</p>", 1)
     cap_html, body = after.split("</figcaption>", 1)
     body, sources = body.split("<h3>Sources</h3>", 1)
+    body = apply_notes(body)
     ref_m = re.search(r"(First Part of the Second Part|Second Part of the Second Part|First Part|Third Part|Supplement to the Third Part|Appendix II|Appendix I), Question (\d+).*Article (\d+)", where)
     short = {"First Part": "I", "First Part of the Second Part": "I-II", "Second Part of the Second Part": "II-II",
              "Third Part": "III", "Supplement to the Third Part": "Suppl.", "Appendix I": "App. I", "Appendix II": "App. II"}
@@ -141,7 +172,8 @@ def summa_panel(src: str):
              f"<figcaption>{cap_html.removeprefix('<figcaption>')}</figcaption></figure>\n"
              '<header class="reading-head">\n'
              f'<p class="kicker">Summa Theologiae · {html.escape(label)} · about {minutes} min read</p>\n'
-             f'<h2>{title}</h2>\n<p class="byline">{where_html.removeprefix("<p>")}</p>\n</header>\n'
+             + (MN_TOGGLE + "\n" if "mn-block" in body else "")
+             + f'<h2>{title}</h2>\n<p class="byline">{where_html.removeprefix("<p>")}</p>\n</header>\n'
              f'<section class="article-text">\n{body.strip()}\n</section>\n'
              f'<section class="sources">\n<h3>Sources</h3>{sources}\n</section>\n'
              "</article>\n</div>")

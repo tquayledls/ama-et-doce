@@ -131,6 +131,35 @@ article.summa .sources li { scroll-margin-top: 1.5rem; overflow-wrap: anywhere; 
 article.summa .sources a.back { text-decoration: none; color: var(--gilt); margin-right: .2em; }
 article.summa .sources li:target { color: var(--fg); background: color-mix(in srgb, var(--gilt) 14%, transparent); }
 
+/* Margin notes: glosses on old texts. Right margin on wide screens, under the paragraph on narrow ones. Reader can switch them off. */
+.mk { border-bottom: 1px dotted var(--gilt); }
+.mnotes { display: grid; gap: .55rem; margin-top: .55rem; }
+.mnote { font-size: .88rem; line-height: 1.42; color: var(--muted); border-left: 2px solid var(--gilt); padding-left: .7rem; }
+.mnote b { color: var(--fg); font-weight: 600; }
+.mn-toggle { justify-self: start; font-family: var(--label); font-size: .78rem; letter-spacing: .06em; color: var(--muted); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: .2rem .75rem; cursor: pointer; }
+.mn-toggle b { color: var(--lapis); font-weight: 700; }
+.mn-toggle:hover { color: var(--fg); border-color: var(--gilt); }
+html[data-mnotes="off"] .mnotes { display: none; }
+html[data-mnotes="off"] .mk { border-bottom: 0; }
+@media (min-width: 980px) {
+  html:not([data-mnotes="off"]) article.fathers,
+  html:not([data-mnotes="off"]) article.summa { max-width: 58rem; }
+  html:not([data-mnotes="off"]) article.fathers > header,
+  html:not([data-mnotes="off"]) article.summa > header,
+  html:not([data-mnotes="off"]) article.fathers > section:not(:has(.mn-block)),
+  html:not([data-mnotes="off"]) article.summa > section:not(:has(.mn-block)),
+  html:not([data-mnotes="off"]) article.summa > figure { max-width: 40rem; }
+  html:not([data-mnotes="off"]) section:has(.mn-block) > :not(.mn-block) { max-width: 40rem; }
+  html:not([data-mnotes="off"]) .mn-block { display: grid; grid-template-columns: minmax(0, 40rem) 15rem; column-gap: 2.25rem; align-items: start; }
+  html:not([data-mnotes="off"]) .mnotes { margin-top: 0; }
+}
+article.fathers .excerpt h4:first-of-type + .mn-block > p::first-letter,
+article.fathers .excerpt h3 + .mn-block > p::first-letter { font-family: var(--display); font-size: 3.2em; float: left; line-height: .82; padding: .08em .1em 0 0; color: var(--lapis); }
+article.fathers .mn-block > p, article.summa .mn-block > p { margin: 0; }
+article.fathers .excerpt .mn-block > p { font-size: 1.16rem; line-height: 1.72; }
+article.summa .article-text .mn-block > p { font-size: 1.12rem; line-height: 1.7; }
+article.summa .article-text .mn-block > p.objection { color: var(--muted); }
+
 @media (max-width: 760px) {
   .leaf { grid-template-columns: minmax(0, 1fr); }
   figure { position: static; max-width: 30rem; margin-inline: auto; width: 100%; }
@@ -170,6 +199,28 @@ article.summa .sources li:target { color: var(--fg); background: color-mix(in sr
     <span>Painting via Wikimedia Commons</span>
   </footer>
 </div>
+<script>
+  // Margin notes on/off: on by default, and the choice is remembered for every page on this site.
+  (function () {
+    var KEY = "amaetdoce-margin-notes", root = document.documentElement;
+    function saved() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function set(on) {
+      root.setAttribute("data-mnotes", on ? "on" : "off");
+      document.querySelectorAll(".mn-toggle").forEach(function (b) {
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        b.querySelector("b").textContent = on ? "on" : "off";
+      });
+    }
+    set(saved() !== "off");
+    document.querySelectorAll(".mn-toggle").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var on = root.getAttribute("data-mnotes") === "off";
+        set(on);
+        try { localStorage.setItem(KEY, on ? "on" : "off"); } catch (e) {}
+      });
+    });
+  })();
+</script>
 <script>
   // Give the excerpt section its quotation styling.
   document.querySelectorAll("article section").forEach(function (s) {
