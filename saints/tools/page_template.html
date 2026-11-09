@@ -151,7 +151,7 @@ html[data-mnotes="off"] .mk { border-bottom: 0; }
   html:not([data-mnotes="off"]) article.summa > figure { max-width: 40rem; }
   html:not([data-mnotes="off"]) section:has(.mn-block) > :not(.mn-block) { max-width: 40rem; }
   html:not([data-mnotes="off"]) .mn-block { display: grid; grid-template-columns: minmax(0, 40rem) 15rem; column-gap: 2.25rem; align-items: start; }
-  html:not([data-mnotes="off"]) .mnotes { margin-top: 0; }
+  html:not([data-mnotes="off"]) .mnotes { margin-top: 0; position: relative; }
 }
 article.fathers .excerpt h4:first-of-type + .mn-block > p::first-letter,
 article.fathers .excerpt h3 + .mn-block > p::first-letter { font-family: var(--display); font-size: 3.2em; float: left; line-height: .82; padding: .08em .1em 0 0; color: var(--lapis); }
@@ -210,7 +210,36 @@ article.summa .article-text .mn-block > p.objection { color: var(--muted); }
         b.setAttribute("aria-pressed", on ? "true" : "false");
         b.querySelector("b").textContent = on ? "on" : "off";
       });
+      if (typeof place === "function") setTimeout(place, 0);
     }
+    // On wide screens each note sits beside the words it explains (pushed down just enough to clear the note above).
+    var wide = window.matchMedia("(min-width: 980px)");
+    function place() {
+      var on = root.getAttribute("data-mnotes") !== "off" && wide.matches;
+      document.querySelectorAll(".mn-block").forEach(function (blk) {
+        var box = blk.querySelector(".mnotes");
+        var notes = box.querySelectorAll(".mnote");
+        if (!on || !blk.offsetParent) {
+          box.style.height = ""; notes.forEach(function (n) { n.style.position = n.style.top = n.style.left = n.style.right = ""; });
+          return;
+        }
+        var base = box.getBoundingClientRect().top, bottom = 0;
+        notes.forEach(function (n) {
+          var mk = blk.querySelector('.mk[data-n="' + n.getAttribute("data-n") + '"]');
+          var r = mk && mk.getClientRects()[0];
+          var want = r ? r.top - base - 2 : bottom;
+          n.style.position = "absolute"; n.style.left = "0"; n.style.right = "0";
+          n.style.top = Math.max(want, bottom ? bottom + 8 : 0) + "px";
+          bottom = parseFloat(n.style.top) + n.offsetHeight;
+        });
+        box.style.height = bottom + "px";
+      });
+    }
+    window.addEventListener("resize", place);
+    window.addEventListener("hashchange", function () { setTimeout(place, 0); });
+    document.querySelectorAll('.tabs [role="tab"]').forEach(function (t) { t.addEventListener("click", function () { setTimeout(place, 0); }); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
+    window.addEventListener("load", place);
     set(saved() !== "off");
     document.querySelectorAll(".mn-toggle").forEach(function (b) {
       b.addEventListener("click", function () {

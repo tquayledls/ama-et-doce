@@ -99,11 +99,11 @@ def apply_notes(s: str) -> str:
         notes = []
         def mk(n):
             notes.append((n.group(1), n.group(2)))
-            return f'<span class="mk">{n.group(1)}</span>'
+            return f'<span class="mk" data-n="{len(notes)}">{n.group(1)}</span>'
         inner = NOTE.sub(mk, inner)
         if not notes:
             return m.group(0)
-        side = "".join(f'<aside class="mnote"><b>{a}</b> {t}</aside>' for a, t in notes)
+        side = "".join(f'<aside class="mnote" data-n="{i}"><b>{a}</b> {t}</aside>' for i, (a, t) in enumerate(notes, 1))
         return f'<div class="mn-block"><p{attrs}>{inner}</p><div class="mnotes">{side}</div></div>'
     return re.sub(r"<p([^>]*)>(.*?)</p>", para, s, flags=re.S)
 
