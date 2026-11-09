@@ -109,10 +109,32 @@ async function sendEmail(env, to, subject, text) {
   if (!res.ok) console.error("Email send failed", res.status, await res.text());
 }
 
-async function sendLoginLink(env, user) {
-  const token = await newToken(env, user.id, "login", 15 * 60);
-  await sendEmail(env, user.email, "Your sign-in link for Ama et Doce",
-    `Hello ${user.name},\n\nUse this link to sign in and comment. It works once and expires in 15 minutes:\n\n${env.SITE_URL}#login=${token}\n\nIf you didn't ask for this, ignore this email.\n`);
+// Until a sending domain is verified in Resend, mail can only reach the owner. In that mode (EMAIL_USERS
+// not "1") sign-in links for everyone else are emailed to the owner, who forwards them by hand.
+const mailable = (env, user) => env.EMAIL_USERS === "1" || isOwner(env, user);
+
+async function sendLoginLink(env, user, ttlSec = 15 * 60) {
+  const token = await newToken(env, user.id, "login", ttlSec);
+  const link = `${env.SITE_URL}#login=${token}`;
+  const mins = Math.round(ttlSec / 60), expires = mins >= 120 ? `${Math.round(mins / 60 / 24)} days` : `${mins} minutes`;
+  if (mailable(env, user)) {
+    await sendEmail(env, user.email, "Your sign-in link for Ama et Doce",
+      `Hello ${user.name},
+
+Use this link to sign in and comment. It works once and expires in ${expires}:
+
+${link}
+
+If you didn't ask for this, ignore this email.
+`);
+  } else {
+    await sendEmail(env, env.OWNER_EMAIL, `Ama et Doce: sign-in link for ${user.name}`,
+      `${user.name} <${user.email}> needs a sign-in link. Forward this to them. It works once and expires in ${expires}:
+
+${link}
+`);
+  }
+  return link;
 }
 
 const EMAIL_RE = /^[^\s@<>"',;]{1,64}@[^\s@<>"',;]{1,255}\.[^\s@<>"',;]{2,}$/;
@@ -134,7 +156,7 @@ async function requestAccess(request, env, url) {
   if (existing) {
     if (existing.status === "approved") {
       await sendLoginLink(env, existing);
-      return json({ ok: true, message: "You already have access. We've emailed you a sign-in link." });
+      return json({ ok: true, message: "You already have access. A sign-in link has been requested." + (env.EMAIL_USERS === "1" ? "" : " The site owner sends these personally, so it may take a little while.") });
     }
     return json(reply);                           // pending or denied: say nothing new, send nothing
   }
@@ -180,12 +202,9 @@ async function adminDecide(request, env) {
     env.DB.prepare("UPDATE users SET status = ? WHERE id = ?").bind(approve ? "approved" : "denied", row.id),
     env.DB.prepare("UPDATE tokens SET used_at = ? WHERE hash = ?").bind(now(), row.hash),
   ]);
-  if (approve) {
-    const token = await newToken(env, row.id, "login", 7 * DAY);
-    await sendEmail(env, row.email, "You're approved to comment on Ama et Doce",
-      `Hello ${row.name},\n\nYour request was approved. Use this link to sign in and start commenting (it works once and expires in 7 days; after that, request a fresh link from the site):\n\n${env.SITE_URL}#login=${token}\n`);
-  }
-  return htmlPage("Done", `<h1>${approve ? "Approved" : "Denied"}</h1><p>${esc(row.name)} (${esc(row.email)}) was ${approve ? "approved and emailed a sign-in link" : "denied; no email was sent"}.</p>`);
+  let link = "";
+  if (approve) link = await sendLoginLink(env, row, 7 * DAY);
+  return htmlPage("Done", `<h1>${approve ? "Approved" : "Denied"}</h1><p>${esc(row.name)} (${esc(row.email)}) was ${approve ? "approved" : "denied; no email was sent"}.</p>${approve ? `<p>Send them this one-time sign-in link (valid 7 days). A copy was also emailed to you:</p><p style="overflow-wrap:anywhere"><a href="${esc(link)}">${esc(link)}</a></p>` : ""}`);
 }
 
 async function login(request, env) {
@@ -196,7 +215,7 @@ async function login(request, env) {
     throw new HttpError(429, "Too many attempts. Please try again later.");
   const user = await env.DB.prepare("SELECT id, name, email FROM users WHERE email = ? AND status = 'approved'").bind(e).first();
   if (user) await sendLoginLink(env, user);
-  return json({ ok: true, message: "If that address has access, a sign-in link is on its way." });   // same answer either way
+  return json({ ok: true, message: "If that address has access, a sign-in link is on its way." + (env.EMAIL_USERS === "1" ? "" : " The site owner sends these personally, so it may take a little while.") });   // same answer either way
 }
 
 async function verify(request, env) {

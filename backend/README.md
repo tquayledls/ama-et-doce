@@ -23,9 +23,10 @@ and push to `daily`. Pages built without that file have no comments.
 
 ## Email sender
 
-`FROM_EMAIL` in `wrangler.toml` defaults to Resend's `onboarding@resend.dev`, which only delivers to the
-Resend account owner. That is enough for approval emails to you, but sign-in links to other people need a
-verified sending domain in Resend; set `FROM_EMAIL` to an address on it, then redeploy.
+`FROM_EMAIL` is Resend's `onboarding@resend.dev`, which only delivers to the Resend account owner. So sign-in
+links for other commenters are emailed to `OWNER_EMAIL` (and shown on the approval page) for you to forward by hand.
+Once you own a domain: verify it at https://resend.com/domains, set `FROM_EMAIL` to an address on it and
+`EMAIL_USERS = "1"` in `wrangler.toml`, then `npx wrangler deploy`. Links then go straight to commenters.
 
 ## Local testing
 
