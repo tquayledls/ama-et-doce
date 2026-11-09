@@ -11,7 +11,7 @@ migrations_dir = "migrations"
 [vars]
 SITE_ORIGIN = "https://tquayledls.github.io"
 SITE_URL = "https://tquayledls.github.io/ama-et-doce/"
-OWNER_EMAIL = "tquayle23@gmail.com"
+OWNER_EMAIL = "tquayle@damascuslighting.com"
 # Resend's onboarding address only delivers to the Resend account owner, so for now sign-in links for
 # other commenters go to OWNER_EMAIL to forward by hand. After verifying a domain in Resend, set FROM_EMAIL to it and EMAIL_USERS = "1".
 FROM_EMAIL = "Ama et Doce <onboarding@resend.dev>"
