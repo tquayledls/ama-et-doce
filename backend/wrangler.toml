@@ -1,0 +1,17 @@
+name = "ama-et-doce-comments"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ama-et-doce-comments"
+database_id = "d56b6ae4-3f95-4d7d-9d2c-ff61a77ca396"
+migrations_dir = "migrations"
+
+[vars]
+SITE_ORIGIN = "https://tquayledls.github.io"
+SITE_URL = "https://tquayledls.github.io/ama-et-doce/"
+OWNER_EMAIL = "tquayle23@gmail.com"
+# Resend's onboarding address only delivers to the Resend account owner. To email other
+# commenters (sign-in links), verify a sending domain in Resend and change this.
+FROM_EMAIL = "Ama et Doce <moderator@ama-et-doce.com>"

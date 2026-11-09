@@ -30,6 +30,23 @@ def head_tags(title, desc):
             '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E'
             '%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9C%A0%3C/text%3E%3C/svg%3E">\n')
 
+# Comments service (see backend/). The Worker URL comes from $COMMENTS_API, else comments_api.txt.
+# When neither is set the pages are built without comments.
+def comments_api():
+    v = os.environ.get("COMMENTS_API", "").strip()
+    if not v:
+        f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "comments_api.txt")
+        v = open(f, encoding="utf-8").read().strip() if os.path.exists(f) else ""
+    return v
+
+def comments_tags(prefix, slug):
+    api = comments_api()
+    if not api:
+        return ""
+    e = html.escape
+    return (f'<meta name="comments-api" content="{e(api)}">\n<meta name="comments-day" content="{e(slug)}">\n'
+            f'<link rel="stylesheet" href="{prefix}comments.css">\n<script defer src="{prefix}comments.js"></script>\n')
+
 def split(page):
     i = page.index('<div class="lit-band"')
     return page[:i], page[i:]
@@ -101,7 +118,7 @@ def main():
         head, body = split(open(os.path.join(ROOT, "pages", slug + ".html"), encoding="utf-8").read())
         body = with_footer(with_nav(body, nav("../", slug, slug in pdfs)))
         open(os.path.join(site, "days", slug + ".html"), "w", encoding="utf-8").write(
-            head_tags(f"{name}: Saint of the Day", DESCRIPTION) + head + SITE_CSS
+            head_tags(f"{name}: Saint of the Day", DESCRIPTION) + head + SITE_CSS + comments_tags("../", slug)
             + "</head>\n<body>\n" + body + "\n</body>\n</html>\n")
 
     d, name, slug = rs[-1]
@@ -110,7 +127,14 @@ def main():
     body = with_footer(with_nav(body, nav("", slug, slug in pdfs)))
     body = body.replace('<footer class="foot">', archive_html(rs, "") + '<footer class="foot">', 1)
     open(os.path.join(site, "index.html"), "w", encoding="utf-8").write(
-        head_tags("Saint of the Day", DESCRIPTION) + head + SITE_CSS + "</head>\n<body>\n" + body + "\n</body>\n</html>\n")
+        head_tags("Saint of the Day", DESCRIPTION) + head + SITE_CSS + comments_tags("", slug) + "</head>\n<body>\n" + body + "\n</body>\n</html>\n")
+
+    for asset in ("comments.js", "comments.css"):
+        path = os.path.join(site, asset)
+        if comments_api():
+            shutil.copyfile(os.path.join(os.path.dirname(os.path.abspath(__file__)), asset), path)
+        elif os.path.exists(path):
+            os.remove(path)
 
     # claude.ai shared page: same home page, without the document wrapper the artifact adds itself
     os.makedirs(os.path.join(ROOT, "artifact"), exist_ok=True)

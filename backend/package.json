@@ -1,0 +1,14 @@
+{
+  "name": "ama-et-doce-comments",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --persist-to .wrangler/state",
+    "migrate:local": "wrangler d1 migrations apply DB --local --persist-to .wrangler/state",
+    "migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
