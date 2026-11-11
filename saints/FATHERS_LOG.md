@@ -8,3 +8,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 2 | 2026-11-06 | 2 | The restless heart | St. Augustine of Hippo | *Confessions* I.1–5; X.27 (NPNF1 1, trans. Pilkington) | 1,506 | [fathers](fathers/2026-11-06-the-restless-heart.html) |
 | 3 | 2026-11-09 | 3 | Faith and reason | Clement of Alexandria | *Stromata* II.3–4 (ANF 2, trans. Wilson) | 1,883 | [fathers](fathers/2026-11-09-faith-and-reason.html) |
 | 4 | 2026-11-10 | 4 | The one God against the many gods | St. Athanasius | *Against the Heathen* 35–38 (NPNF2 4, trans. Robertson) | 2,057 | [fathers](fathers/2026-11-10-the-one-god-against-the-many-gods.html) |
+| 5 | 2026-11-11 | 5 | Scripture, given by God | St. Irenaeus of Lyons | *Against Heresies* II.28.1–3, 6–7 (ANF 1, trans. Roberts and Rambaut) | 1,900 | [fathers](fathers/2026-11-11-scripture-given-by-god.html) |

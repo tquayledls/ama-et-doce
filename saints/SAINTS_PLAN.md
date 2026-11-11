@@ -82,7 +82,7 @@ Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 | Nov 8 | St. Elizabeth of the Trinity | Feast |
 | Nov 9 | St. Athanasius | Lateran Basilica dedication. Open day ✅ |
 | Nov 10 | St. Leo the Great | Memorial ✅ |
-| Nov 11 | St. Martin of Tours | Memorial |
+| Nov 11 | St. Martin of Tours | Memorial ✅ |
 | Nov 12 | St. Josaphat | Memorial |
 | Nov 13 | St. Frances Xavier Cabrini | Memorial (U.S.) |
 | Nov 14 | St. John Henry Newman | Open day |

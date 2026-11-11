@@ -8,3 +8,4 @@ One article a day, in order (see `SUMMA_PLAN.md`). Seq is the article's line num
 | 2 | 2026-11-06 | 2 | I, q.1, a.2 | Whether sacred doctrine is a science? | *Triumph of St. Thomas Aquinas*, Lippo Memmi, c. 1340, Santa Caterina, Pisa | [summa](summa/2026-11-06-summa-i-q1-a2.html) |
 | 3 | 2026-11-09 | 3 | I, q.1, a.3 | Whether sacred doctrine is one science? | *Disputa del Sacramento*, Raphael, 1509–10, Stanza della Segnatura, Vatican | [summa](summa/2026-11-09-summa-i-q1-a3.html) |
 | 4 | 2026-11-10 | 4 | I, q.1, a.4 | Whether sacred doctrine is a practical science? | *The School of Athens*, Raphael, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-10-summa-i-q1-a4.html) |
+| 5 | 2026-11-11 | 5 | I, q.1, a.5 | Whether sacred doctrine is nobler than other sciences? | *Theology*, Raphael, ceiling tondo, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-11-summa-i-q1-a5.html) |
