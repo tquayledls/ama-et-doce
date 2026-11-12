@@ -9,3 +9,4 @@ One article a day, in order (see `SUMMA_PLAN.md`). Seq is the article's line num
 | 3 | 2026-11-09 | 3 | I, q.1, a.3 | Whether sacred doctrine is one science? | *Disputa del Sacramento*, Raphael, 1509–10, Stanza della Segnatura, Vatican | [summa](summa/2026-11-09-summa-i-q1-a3.html) |
 | 4 | 2026-11-10 | 4 | I, q.1, a.4 | Whether sacred doctrine is a practical science? | *The School of Athens*, Raphael, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-10-summa-i-q1-a4.html) |
 | 5 | 2026-11-11 | 5 | I, q.1, a.5 | Whether sacred doctrine is nobler than other sciences? | *Theology*, Raphael, ceiling tondo, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-11-summa-i-q1-a5.html) |
+| 6 | 2026-11-12 | 6 | I, q.1, a.6 | Whether this doctrine is the same as wisdom? | *The Apotheosis of Saint Thomas Aquinas*, Francisco de Zurbarán, 1631, Museo de Bellas Artes, Seville | [summa](summa/2026-11-12-summa-i-q1-a6.html) |
