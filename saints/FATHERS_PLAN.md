@@ -52,7 +52,7 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 4. ✅ The one God against the many gods: Athanasius, *Against the Heathen* 35–47
 5. ✅ Scripture, given by God: Irenaeus, *Against Heresies* II.28; Augustine, *Confessions* XII
 6. ✅ Apostolic Tradition and succession: Irenaeus, *Against Heresies* III.1–4; Tertullian, *Prescription against Heretics* 20–32
-7. Reading Scripture: Augustine, *On Christian Doctrine* II–III (selections)
+7. ✅ Reading Scripture: Augustine, *On Christian Doctrine* II–III (selections)
 8. The Holy Trinity: Gregory Nazianzen, *Oration* 31 (Fifth Theological Oration)
 9. God the Father Almighty: Cyril of Jerusalem, *Catechetical Lectures* 6–8
 10. Creation out of nothing: Basil, *Hexaemeron* Homily 1; Athanasius, *On the Incarnation* 2–3
