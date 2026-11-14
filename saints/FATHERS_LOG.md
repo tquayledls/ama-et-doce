@@ -11,3 +11,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 5 | 2026-11-11 | 5 | Scripture, given by God | St. Irenaeus of Lyons | *Against Heresies* II.28.1–3, 6–7 (ANF 1, trans. Roberts and Rambaut) | 1,900 | [fathers](fathers/2026-11-11-scripture-given-by-god.html) |
 | 6 | 2026-11-12 | 6 | Apostolic Tradition and succession | St. Irenaeus of Lyons | *Against Heresies* III.2.1–2; III.3.1–4; III.4.1–2 (ANF 1, trans. Roberts and Rambaut) | 2,016 | [fathers](fathers/2026-11-12-apostolic-tradition-and-succession.html) |
 | 7 | 2026-11-13 | 7 | Reading Scripture | St. Augustine | *On Christian Doctrine* II.6–9 (NPNF1 2, trans. Shaw) | 2,132 | [fathers](fathers/2026-11-13-reading-scripture.html) |
+| 8 | 2026-11-14 | 8 | The Holy Trinity | St. Gregory Nazianzen | *Fifth Theological Oration* (Oration 31) III, IV, X, XI, XIV, XXVI, XXVII, XXXI (NPNF2 7, trans. Browne and Swallow) | ~2,100 | [fathers](fathers/2026-11-14-the-holy-trinity.html) |
