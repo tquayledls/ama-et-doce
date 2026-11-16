@@ -55,7 +55,7 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 7. ✅ Reading Scripture: Augustine, *On Christian Doctrine* II–III (selections)
 8. ✅ The Holy Trinity: Gregory Nazianzen, *Oration* 31 (Fifth Theological Oration)
 9. ✅ God the Father Almighty: Cyril of Jerusalem, *Catechetical Lectures* 6–8
-10. Creation out of nothing: Basil, *Hexaemeron* Homily 1; Athanasius, *On the Incarnation* 2–3
+10. ✅ Creation out of nothing: Basil, *Hexaemeron* Homily 1; Athanasius, *On the Incarnation* 2–3
 11. The angels: Gregory the Great, *Homily* 34 on the Gospels (if a PD translation exists); John Damascene, *Exact Exposition* II.3
 12. Man made in God's image: Gregory of Nyssa, *On the Making of Man* 4–5, 16
 13. The Fall and original sin: Augustine, *City of God* XIV.11–15
