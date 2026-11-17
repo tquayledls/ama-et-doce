@@ -14,3 +14,4 @@ One article a day, in order (see `SUMMA_PLAN.md`). Seq is the article's line num
 | 8 | 2026-11-14 | 8 | I, q.1, a.8 | Whether sacred doctrine is a matter of argument? | *Disputa del Sacramento*, Raphael, 1509–10, Stanza della Segnatura, Vatican | [summa](summa/2026-11-14-summa-i-q1-a8.html) |
 | 9 | 2026-11-15 | 9 | I, q.1, a.9 | Whether Holy Scripture should use metaphors? | *The Apotheosis of Saint Thomas Aquinas*, Francisco de Zurbarán, 1631, Museo de Bellas Artes, Seville | [summa](summa/2026-11-15-summa-i-q1-a9.html) |
 | 10 | 2026-11-16 | 10 | I, q.1, a.10 | Whether in Holy Scripture a word may have several senses? | *Theology*, Raphael, ceiling tondo, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-16-summa-i-q1-a10.html) |
+| 11 | 2026-11-17 | 11 | I, q.2, a.1 | Whether the existence of God is self-evident? | *The Creation of Adam*, Michelangelo, c. 1512, Sistine Chapel ceiling, Vatican | [summa](summa/2026-11-17-summa-i-q2-a1.html) |
