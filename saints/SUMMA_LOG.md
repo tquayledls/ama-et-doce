@@ -16,3 +16,4 @@ One article a day, in order (see `SUMMA_PLAN.md`). Seq is the article's line num
 | 10 | 2026-11-16 | 10 | I, q.1, a.10 | Whether in Holy Scripture a word may have several senses? | *Theology*, Raphael, ceiling tondo, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-16-summa-i-q1-a10.html) |
 | 11 | 2026-11-17 | 11 | I, q.2, a.1 | Whether the existence of God is self-evident? | *The Creation of Adam*, Michelangelo, c. 1512, Sistine Chapel ceiling, Vatican | [summa](summa/2026-11-17-summa-i-q2-a1.html) |
 | 12 | 2026-11-18 | 12 | I, q.2, a.2 | Whether it can be demonstrated that God exists? | *Wanderer above the Sea of Fog*, Caspar David Friedrich, c. 1818, Kunsthalle Hamburg | [summa](summa/2026-11-18-summa-i-q2-a2.html) |
+| 13 | 2026-11-19 | 13 | I, q.2, a.3 | Whether God exists? | *St. Thomas Aquinas with the Summa*, Fra Angelico, 1442, Convent of San Marco, Florence | [summa](summa/2026-11-19-summa-i-q2-a3.html) |

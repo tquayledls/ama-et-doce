@@ -16,3 +16,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 10 | 2026-11-16 | 10 | Creation out of nothing | St. Basil the Great; St. Athanasius | *Hexaemeron* Homily 1, secs. 2–3 (NPNF2 8, trans. Jackson); *On the Incarnation* 2–3 (NPNF2 4, trans. Robertson) | ~2,080 | [fathers](fathers/2026-11-16-creation-out-of-nothing.html) |
 | 11 | 2026-11-17 | 11 | The angels | St. John Damascene | *An Exact Exposition of the Orthodox Faith* II.3–4 (NPNF2 9, trans. Salmond) | ~1,660 | [fathers](fathers/2026-11-17-the-angels.html) |
 | 12 | 2026-11-18 | 12 | Man made in God's image | St. Gregory of Nyssa | *On the Making of Man* IV, V (1–2), XVI (1–4, 11–13, 16) (NPNF2 5, trans. Wilson) | ~1,700 | [fathers](fathers/2026-11-18-man-made-in-gods-image.html) |
+| 13 | 2026-11-19 | 13 | The Fall and original sin | St. Augustine | *The City of God* XIV.11, 13 (NPNF1 2, trans. Dods) | ~2,320 | [fathers](fathers/2026-11-19-the-fall-and-original-sin.html) |

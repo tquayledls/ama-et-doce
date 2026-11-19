@@ -90,7 +90,7 @@ Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 | Nov 16 | St. Gertrude the Great | Optional memorial ✅ |
 | Nov 17 | St. Elizabeth of Hungary | Memorial ✅ |
 | Nov 18 | St. Rose Philippine Duchesne | Optional memorial (U.S.) ✅ |
-| Nov 19 | St. Thomas Aquinas | Open day |
+| Nov 19 | St. Thomas Aquinas | Open day ✅ |
 | Nov 20 | St. Robert Bellarmine | Open day |
 | Nov 21 | St. Anne | Presentation of Mary |
 | Nov 22 | St. Cecilia | Memorial |
