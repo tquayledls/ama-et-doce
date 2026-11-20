@@ -59,7 +59,7 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 11. ✅ The angels: Gregory the Great, *Homily* 34 on the Gospels (if a PD translation exists); John Damascene, *Exact Exposition* II.3
 12. ✅ Man made in God's image: Gregory of Nyssa, *On the Making of Man* 4–5, 16
 13. ✅ The Fall and original sin: Augustine, *City of God* XIV.11–15
-14. Why is there evil?: Augustine, *Enchiridion* 10–16; *Confessions* VII.3–16
+14. ✅ Why is there evil?: Augustine, *Enchiridion* 10–16; *Confessions* VII.3–16
 15. Why God became man: Athanasius, *On the Incarnation* 6–10
 16. True God and true man: Leo the Great, *Tome* (Letter 28)
 17. One Christ: Cyril of Alexandria, Second Letter to Nestorius; Gregory Nazianzen, Letter 101

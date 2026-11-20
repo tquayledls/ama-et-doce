@@ -17,3 +17,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 11 | 2026-11-17 | 11 | The angels | St. John Damascene | *An Exact Exposition of the Orthodox Faith* II.3–4 (NPNF2 9, trans. Salmond) | ~1,660 | [fathers](fathers/2026-11-17-the-angels.html) |
 | 12 | 2026-11-18 | 12 | Man made in God's image | St. Gregory of Nyssa | *On the Making of Man* IV, V (1–2), XVI (1–4, 11–13, 16) (NPNF2 5, trans. Wilson) | ~1,700 | [fathers](fathers/2026-11-18-man-made-in-gods-image.html) |
 | 13 | 2026-11-19 | 13 | The Fall and original sin | St. Augustine | *The City of God* XIV.11, 13 (NPNF1 2, trans. Dods) | ~2,320 | [fathers](fathers/2026-11-19-the-fall-and-original-sin.html) |
+| 14 | 2026-11-20 | 14 | Why is there evil? | St. Augustine | *Enchiridion* 10–16 (NPNF1 3, trans. J. F. Shaw) | ~1,950 | [fathers](fathers/2026-11-20-why-is-there-evil.html) |
