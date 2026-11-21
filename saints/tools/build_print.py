@@ -39,7 +39,7 @@ def main():
         sys.exit(f"Entry uses note [{markers[-1]}] but the notes file has only {len(notes)} entries.")
 
     s = re.sub(r"^\s*<h2>.*?</h2>\s*", "", src, count=1, flags=re.S)
-    s = re.sub(r"^\s*<p><em>.*?</em></p>\s*", "", s, count=1, flags=re.S)
+    s = re.sub(r"^\s*<p><em>(?:(?!</p>).)*</em>(?:\s*\[\d+\])*</p>\s*", "", s, count=1, flags=re.S)
     pm = re.search(r"<h3>\s*(Painting|Image|Icon)[^<]*</h3>\s*<p>(.*?)</p>\s*", s, flags=re.S | re.I)
     img_note = ""
     if pm:
