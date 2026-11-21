@@ -60,7 +60,7 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 12. ✅ Man made in God's image: Gregory of Nyssa, *On the Making of Man* 4–5, 16
 13. ✅ The Fall and original sin: Augustine, *City of God* XIV.11–15
 14. ✅ Why is there evil?: Augustine, *Enchiridion* 10–16; *Confessions* VII.3–16
-15. Why God became man: Athanasius, *On the Incarnation* 6–10
+15. ✅ Why God became man: Athanasius, *On the Incarnation* 6–10
 16. True God and true man: Leo the Great, *Tome* (Letter 28)
 17. One Christ: Cyril of Alexandria, Second Letter to Nestorius; Gregory Nazianzen, Letter 101
 18. Mary, the New Eve and Mother of God: Irenaeus, *Against Heresies* III.22, V.19; Council of Ephesus

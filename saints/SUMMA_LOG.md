@@ -18,3 +18,4 @@ One article a day, in order (see `SUMMA_PLAN.md`). Seq is the article's line num
 | 12 | 2026-11-18 | 12 | I, q.2, a.2 | Whether it can be demonstrated that God exists? | *Wanderer above the Sea of Fog*, Caspar David Friedrich, c. 1818, Kunsthalle Hamburg | [summa](summa/2026-11-18-summa-i-q2-a2.html) |
 | 13 | 2026-11-19 | 13 | I, q.2, a.3 | Whether God exists? | *St. Thomas Aquinas with the Summa*, Fra Angelico, 1442, Convent of San Marco, Florence | [summa](summa/2026-11-19-summa-i-q2-a3.html) |
 | 14 | 2026-11-20 | 14 | I, q.3, a.1 | Whether God is a body? | *The Creation of Adam*, Michelangelo, c. 1512, Sistine Chapel ceiling, Vatican | [summa](summa/2026-11-20-summa-i-q3-a1.html) |
+| 15 | 2026-11-21 | 15 | I, q.3, a.2 | Whether God is composed of matter and form? | *The School of Athens*, Raphael, 1509–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-21-summa-i-q3-a2.html) |
