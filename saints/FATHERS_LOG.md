@@ -19,3 +19,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 13 | 2026-11-19 | 13 | The Fall and original sin | St. Augustine | *The City of God* XIV.11, 13 (NPNF1 2, trans. Dods) | ~2,320 | [fathers](fathers/2026-11-19-the-fall-and-original-sin.html) |
 | 14 | 2026-11-20 | 14 | Why is there evil? | St. Augustine | *Enchiridion* 10–16 (NPNF1 3, trans. J. F. Shaw) | ~1,950 | [fathers](fathers/2026-11-20-why-is-there-evil.html) |
 | 15 | 2026-11-21 | 15 | Why God became man | St. Athanasius | *On the Incarnation* 6–10 (NPNF2 4, trans. Robertson) | ~2,190 | [fathers](fathers/2026-11-21-why-god-became-man.html) |
+| 16 | 2026-11-22 | 16 | True God and true man | St. Leo the Great | *Letter 28 to Flavian (the Tome)* II–IV (NPNF2 12, trans. Feltoe) | ~2,070 | [fathers](fathers/2026-11-22-true-god-and-true-man.html) |

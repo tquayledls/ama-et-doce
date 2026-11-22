@@ -93,7 +93,7 @@ Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 | Nov 19 | St. Thomas Aquinas | Open day ✅ |
 | Nov 20 | St. Robert Bellarmine | Open day ✅ |
 | Nov 21 | St. Anne | Presentation of Mary ✅ |
-| Nov 22 | St. Cecilia | Memorial |
+| Nov 22 | St. Cecilia | Memorial ✅ |
 | Nov 23 | St. Columban | Optional memorial |
 | Nov 24 | St. Andrew Dung-Lac | Memorial |
 | Nov 25 | St. Catherine of Alexandria | Optional memorial |
