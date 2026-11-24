@@ -20,3 +20,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 14 | 2026-11-20 | 14 | Why is there evil? | St. Augustine | *Enchiridion* 10–16 (NPNF1 3, trans. J. F. Shaw) | ~1,950 | [fathers](fathers/2026-11-20-why-is-there-evil.html) |
 | 15 | 2026-11-21 | 15 | Why God became man | St. Athanasius | *On the Incarnation* 6–10 (NPNF2 4, trans. Robertson) | ~2,190 | [fathers](fathers/2026-11-21-why-god-became-man.html) |
 | 16 | 2026-11-22 | 16 | True God and true man | St. Leo the Great | *Letter 28 to Flavian (the Tome)* II–IV (NPNF2 12, trans. Feltoe) | ~2,070 | [fathers](fathers/2026-11-22-true-god-and-true-man.html) |
+| 17 | 2026-11-24 | 17 | One Christ, whole God and whole man | St. Gregory Nazianzen | *Letter 101 to Cledonius against Apollinarius* (NPNF2 7, trans. Browne and Swallow) | ~1,950 | [fathers](fathers/2026-11-24-one-christ.html) |

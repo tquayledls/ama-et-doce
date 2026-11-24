@@ -62,7 +62,7 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 14. ✅ Why is there evil?: Augustine, *Enchiridion* 10–16; *Confessions* VII.3–16
 15. ✅ Why God became man: Athanasius, *On the Incarnation* 6–10
 16. ✅ True God and true man: Leo the Great, *Tome* (Letter 28)
-17. One Christ: Cyril of Alexandria, Second Letter to Nestorius; Gregory Nazianzen, Letter 101
+17. ✅ One Christ: Cyril of Alexandria, Second Letter to Nestorius; Gregory Nazianzen, Letter 101 (Gregory used 2026-11-24; Cyril's letter still unused)
 18. Mary, the New Eve and Mother of God: Irenaeus, *Against Heresies* III.22, V.19; Council of Ephesus
 19. Mary ever-virgin: Jerome, *Against Helvidius*
 20. The Word made flesh, at Christmas: Gregory Nazianzen, *Oration* 38; Leo, *Sermons* on the Nativity

@@ -95,7 +95,7 @@ Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 | Nov 21 | St. Anne | Presentation of Mary ✅ |
 | Nov 22 | St. Cecilia | Memorial ✅ |
 | Nov 23 | St. Columban | Optional memorial |
-| Nov 24 | St. Andrew Dung-Lac | Memorial |
+| Nov 24 | St. Andrew Dung-Lac | Memorial ✅ |
 | Nov 25 | St. Catherine of Alexandria | Optional memorial |
 | Nov 26 | St. Augustine of Hippo | Thanksgiving (U.S.). Open day |
 | Nov 27 | St. Thomas More | Open day |
