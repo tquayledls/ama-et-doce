@@ -64,7 +64,7 @@ It follows the order of the Catechism: the Creed, the sacraments, life in Christ
 16. ✅ True God and true man: Leo the Great, *Tome* (Letter 28)
 17. ✅ One Christ: Cyril of Alexandria, Second Letter to Nestorius; Gregory Nazianzen, Letter 101 (Gregory used 2026-11-24; Cyril's letter still unused)
 18. ✅ Mary, the New Eve and Mother of God: Irenaeus, *Against Heresies* III.22, V.19; Council of Ephesus
-19. Mary ever-virgin: Jerome, *Against Helvidius*
+19. ✅ Mary ever-virgin: Jerome, *Against Helvidius*
 20. The Word made flesh, at Christmas: Gregory Nazianzen, *Oration* 38; Leo, *Sermons* on the Nativity
 21. The Epiphany and the Baptism of the Lord: Gregory Nazianzen, *Oration* 39; Leo, *Sermons* on the Epiphany
 22. The Cross: Cyril of Jerusalem, *Catechetical Lecture* 13
