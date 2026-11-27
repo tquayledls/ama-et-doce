@@ -23,3 +23,4 @@ Every reading used on the Church Fathers tab, one row per day. Before choosing a
 | 17 | 2026-11-24 | 17 | One Christ, whole God and whole man | St. Gregory Nazianzen | *Letter 101 to Cledonius against Apollinarius* (NPNF2 7, trans. Browne and Swallow) | ~1,950 | [fathers](fathers/2026-11-24-one-christ.html) |
 | 18 | 2026-11-25 | 18 | Mary, the New Eve | St. Irenaeus of Lyons | *Against Heresies* III.21.10; III.22.1–4; V.19.1 (ANF 1, trans. Roberts and Rambaut) | ~1,670 | [fathers](fathers/2026-11-25-mary-the-new-eve.html) |
 | 19 | 2026-11-26 | 19 | Mary ever-virgin | St. Jerome | *Against Helvidius* 3, 4, 6 (NPNF2 6, trans. Fremantle, Lewis and Martley) | ~1,550 | [fathers](fathers/2026-11-26-mary-ever-virgin.html) |
+| 20 | 2026-11-27 | 20 | The Word made flesh, at Christmas | St. Gregory Nazianzen | *Oration* 38 I–IV, XIII–XIV (NPNF2 7, trans. Browne and Swallow) | ~1,600 | [fathers](fathers/2026-11-27-the-word-made-flesh.html) |
