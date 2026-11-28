@@ -24,3 +24,4 @@ One article a day, in order (see `SUMMA_PLAN.md`). Seq is the article's line num
 | 18 | 2026-11-25 | 18 | I, q.3, a.5 | Whether God is contained in a genus? | *Saint Catherine of Alexandria*, Raphael, c. 1507, National Gallery, London | [summa](summa/2026-11-25-summa-i-q3-a5.html) |
 | 19 | 2026-11-26 | 19 | I, q.3, a.6 | Whether in God there are any accidents? | *Philosophy (Causarum Cognitio)*, Raphael, 1508–11, Stanza della Segnatura, Vatican | [summa](summa/2026-11-26-summa-i-q3-a6.html) |
 | 20 | 2026-11-27 | 20 | I, q.3, a.7 | Whether God is altogether simple? | *The Separation of Light from Darkness*, Michelangelo, 1511–12, Sistine Chapel ceiling, Vatican | [summa](summa/2026-11-27-summa-i-q3-a7.html) |
+| 21 | 2026-11-28 | 21 | I, q.3, a.8 | Whether God enters into the composition of other things? | *The Creation of Adam*, Michelangelo, c. 1512, Sistine Chapel ceiling, Vatican | [summa](summa/2026-11-28-summa-i-q3-a8.html) |

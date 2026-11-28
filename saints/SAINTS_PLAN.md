@@ -99,7 +99,7 @@ Subject line format: `Saint of the Day — <Month D>: <Saint Name>`
 | Nov 25 | St. Catherine of Alexandria | Optional memorial ✅ |
 | Nov 26 | St. Augustine of Hippo | Thanksgiving (U.S.). Open day ✅ |
 | Nov 27 | St. Thomas More | Open day ✅ |
-| Nov 28 | St. Catherine of Siena | Open day |
+| Nov 28 | St. Catherine of Siena | Open day ✅ |
 | Nov 29 | St. John the Baptist | First Sunday of Advent |
 | Nov 30 | St. Andrew the Apostle | Feast |
 | Dec 1 | St. Edmund Campion | Apologist and martyr |
